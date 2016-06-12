@@ -1,5 +1,8 @@
-# dmoz_csv
-A python script to convert DMOZ content.rdf.u8.gz into a CSV file. It also includes the output CSV file generated from it. 
+## DMOZ CSV
+
+[DMOZ](http://www.dmoz.org/) is a large communaly maintained open directory that categorizes web content. The data are posted in a [XML format](http://rdf.dmoz.org/). 
+
+The [python scripts](scripts/) provided here convert DMOZ content.rdf.u8.gz into a CSV file.  
 
 The structure of the file is
 
