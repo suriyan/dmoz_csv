@@ -16,7 +16,8 @@ Usage
 -----
 
 ```
-usage: dmozcat2csv.py [-h] [-v] [--version] [-o OUTPUT] input
+usage: dmozcat2csv.py [-h] [-v] [--version] [-o OUTPUT] [--with-subdomain]
+                      input
 
 positional arguments:
   input                 RDF file name (XML format)
@@ -27,6 +28,7 @@ optional arguments:
   --version             show program's version number and exit
   -o OUTPUT, --output OUTPUT
                         CSV output filename
+  --with-subdomain
 
 ```
 

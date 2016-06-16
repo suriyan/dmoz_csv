@@ -41,6 +41,7 @@ def get_args():
     parser.add_argument('input', help='RDF file name (XML format)')
     parser.add_argument('-o', '--output', action='store', dest='output',
                         default=DEF_OUT_CSV, help='CSV output filename')
+    parser.add_argument('--with-subdomain', action='store_true', default=False)
 
     results = parser.parse_args()
     return results
@@ -72,7 +73,10 @@ if __name__ == "__main__":
         page_link = external_page.attrib
         url_string = page_link.get('about')
         tld = tldextract.extract(url_string)
-        domain = tld.registered_domain
+        if args.with_subdomain and tld.subdomain != '':
+            domain = '.'.join([tld.subdomain, tld.domain, tld.suffix])
+        else:
+            domain = tld.registered_domain
         if domain == '':
             logging.warn("Cannot extract the domain from <{0!s}>"
                          .format(url_string))
