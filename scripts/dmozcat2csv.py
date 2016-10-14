@@ -7,8 +7,9 @@ import csv
 
 import tldextract
 from lxml import etree
+from urlparse import urlparse
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 NS = {'dmoz_rdf': 'http://dmoz.org/rdf/'}
 
@@ -42,6 +43,7 @@ def get_args():
     parser.add_argument('-o', '--output', action='store', dest='output',
                         default=DEF_OUT_CSV, help='CSV output filename')
     parser.add_argument('--with-subdomain', action='store_true', default=False)
+    parser.add_argument('--without-path', action='store_true', default=False)
 
     results = parser.parse_args()
     return results
@@ -73,6 +75,10 @@ if __name__ == "__main__":
         page_link = external_page.attrib
         url_string = page_link.get('about')
         tld = tldextract.extract(url_string)
+        if args.without_path:
+            o = urlparse(url_string)
+            if o.path != '/':
+                continue
         if args.with_subdomain and tld.subdomain != '':
             domain = '.'.join([tld.subdomain, tld.domain, tld.suffix])
         else:
