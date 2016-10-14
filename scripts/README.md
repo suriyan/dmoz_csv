@@ -17,6 +17,7 @@ Usage
 
 ```
 usage: dmozcat2csv.py [-h] [-v] [--version] [-o OUTPUT] [--with-subdomain]
+                      [--without-path]
                       input
 
 positional arguments:
@@ -29,7 +30,7 @@ optional arguments:
   -o OUTPUT, --output OUTPUT
                         CSV output filename
   --with-subdomain
-
+  --without-path
 ```
 
 Example
