@@ -93,7 +93,7 @@ if __name__ == "__main__":
             domain_category_dict[domain].update(new_topic_set)
 
     with open(args.output, 'wb') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for d in domain_category_dict:
             cols = [d, '|'.join(list(domain_category_dict[d]))]
             utf8_cols = [x.encode('utf-8') for x in cols]
