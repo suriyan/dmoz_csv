@@ -95,6 +95,6 @@ if __name__ == "__main__":
     with open(args.output, 'wb') as f:
         writer = csv.writer(f)
         for d in domain_category_dict:
-            cols = [d] + list(domain_category_dict[d])
+            cols = [d, '|'.join(list(domain_category_dict[d]))]
             utf8_cols = [x.encode('utf-8') for x in cols]
             writer.writerow(utf8_cols)
