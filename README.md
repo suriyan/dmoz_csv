@@ -25,5 +25,6 @@ The corresponding line for it will be generated as:
 "http://www.demus.it/","Top/Regional/Europe/Italy/Friuli-Venezia_Giulia/Localities/Trieste/Business_and_Economy","Top/World/Italiano/Affari/Alimentazione_e_Prodotti_Correlati/Bevande/Caffè","Top/World/Italiano/Regionale/Europa/Italia/Friuli-Venezia_Giulia/Provincia_di_Trieste/Località/Trieste/Affari_e_Economia","Top/Business/Food_and_Related_Products/Beverages/Coffee"
 ```
 
-<a name="dmoz_closed">1</a>: Dmoz.org was discontinued on March 17, 2017. The content as moved to http://dmoztools.net
+<a name="dmoz_closed">1</a>: Dmoz.org was discontinued on March 17, 2017. The content as moved to http://dmoztools.net And now hosted on
+https://curlie.org/
 
